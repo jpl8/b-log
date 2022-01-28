@@ -9,7 +9,14 @@ import           Hakyll
 config :: Configuration
 config = defaultConfiguration 
     {
-        destinationDirectory = "docs"
+        destinationDirectory = "docs",
+        deployCommand = "echo \"Deploying!!\""
+        --deployCommand = "git checkout main\n\
+        --               \ site clean\n\
+        --               \ site build\n\
+        --               \ git add -A\n\
+        --               \ git commit -m \"Publish\"\n\
+        --               \ git push origin main"
     }
 
 main :: IO ()

@@ -1,0 +1,33 @@
+:root {
+    --body_background: #6e5773;
+    --main_background: #febe7e;
+}
+
+body {
+    background-color: var(--body_background);
+}
+
+main {
+    background-color: var(--main_background);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav a {
+    color: #FCF8E3;
+}
+
+a:link {
+  color: #0000ff;
+  }
+  /*
+  a:visited {
+    color: #DDDFFF;
+  }
+  */
+  a:hover {
+  color: #ff00ff;
+  }
+  a:active {
+  color: blue;
+}
