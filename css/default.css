@@ -21,10 +21,13 @@ nav {
 nav a {
   font-size: 1.8rem;
   font-weight: bold;
-  color: black;
+  color: var(--nav-links-color);
   text-decoration: none;
   text-transform: uppercase;
 }
+
+
+
 
 footer {
   margin-top: 3rem;
@@ -50,7 +53,7 @@ article .header {
 
 .logo a {
   font-weight: bold;
-  color: #000;
+  color: var(--nav-title-color);
   text-decoration: none;
 }
 
@@ -114,7 +117,7 @@ article .header {
 
 @media (min-width: 640px) {
   body {
-    width: 60rem;
+    width: 69%;
     margin: 0 auto;
     padding: 0;
   }
