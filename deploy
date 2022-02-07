@@ -25,5 +25,4 @@ git push --set-upstream origin main
 
 # restore state of repo
 git checkout develop
-git branch -D main
 git stash pop

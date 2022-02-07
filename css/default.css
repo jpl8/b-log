@@ -1,4 +1,6 @@
 @import "theme.css";
+@import "syntax.css";
+@import "alyata-code.css";
 
 html {
   font-size: 62.5%;
@@ -145,3 +147,5 @@ article .header {
     font-size: 1.8rem;
   }
 }
+
+
