@@ -1,3 +1,6 @@
+/* @import "syntax.css"; */
+/* @import "alyata-code.css"; */
+
 :root {
     --body_background: #6e5773;
     --main_background: #febe7e;
@@ -26,4 +29,25 @@ a:hover {
 }
 a:active {
   color: blue;
+}
+
+/* ALL CREDIT GOES TO  alyata
+ * at https://alyata.github.io/ 
+ */
+
+
+/* box around inline code */
+code {
+    background-color: #dea973;
+    border: 1px solid rgb(200, 200, 200);
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 14px;
+}
+
+/* box around code blocks */ 
+pre code {
+    display: block;
+    padding: 8px;
+    margin-bottom: 2em;
 }

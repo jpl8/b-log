@@ -10,7 +10,7 @@ git checkout develop
 site rebuild
 
 # make sure local repo is up to date
-git fetch --all
+# git fetch --all
 
 # go to main branch - create one if it doesn't exist, otherwise reset the
 # existing main branch
