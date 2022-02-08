@@ -1,4 +1,5 @@
 @import "theme.css";
+@import "syntax.css";
 
 html {
   font-size: 62.5%;
