@@ -11,13 +11,7 @@ config = defaultConfiguration
     {
         destinationDirectory = "docs",
         deployCommand = "echo \"Deploying!!\""
-        --deployCommand = "git checkout main\n\
-        --               \ site clean\n\
-        --               \ site build\n\
-        --               \ git add -A\n\
-        --               \ git commit -m \"Publish\"\n\
-        --               \ git push origin main"
-    }
+   }
 
 main :: IO ()
 main = hakyllWith config $ do
@@ -42,6 +36,16 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
+
+    match "poetry/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+
+
+
     create ["archive.html"] $ do
         route idRoute
         compile $ do
@@ -55,6 +59,23 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
+
+ 
+ 
+    create ["poetry.html"] $ do
+        route idRoute
+        compile $ do
+            poetry <- recentFirst =<< loadAll "poetry/*"
+            let archiveCtx =
+                    listField "posts" postCtx (return poetry) `mappend`
+                    constField "title" "Poetry"               `mappend`
+                    defaultContext
+ 
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= relativizeUrls
+
 
 
     match "index.html" $ do
