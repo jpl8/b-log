@@ -60,7 +60,7 @@ article .header {
 
 @media (max-width: 319px) {
   body {
-    width: 90%;
+    /* width: 90%; */
     margin: 0;
     padding: 0 5%;
   }
