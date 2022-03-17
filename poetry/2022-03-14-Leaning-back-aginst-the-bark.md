@@ -3,7 +3,7 @@ title: Leaning back against the bark
 ---
 
 Leaning back against the bark,  
-Hearing the chirps of birds in spring,  
+Hearing the chirps of larks in spring,  
 I think of you who left your mark,  
 And so too do I now sing.  
 
